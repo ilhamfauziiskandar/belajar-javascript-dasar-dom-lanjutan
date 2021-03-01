@@ -14,7 +14,7 @@ nama('ilham');
 
 
 //akan error
-//maka fungsi expression harus selalu ditulis dulu definisinya baru di panggil
+//karna fungsi expression harus selalu ditulis dulu definisinya baru di panggil
 nama1('ilham');
 
 var nama1 = function(nama1){

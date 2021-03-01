@@ -1,4 +1,13 @@
-//-------- argument --------
+// (a,b) adalah parameter
+function tambah(a,b){
+
+    return a + b;
+
+}
+
+//tambah(1,2) adalah argumen
+var coba = tambah(1,2);
+
 function data(){
     return arguments;
 }

@@ -1,3 +1,16 @@
+//cara membuat fungsi
+// keyword function, intepreter javascript bahwa kita akan memulai fungsi
+function namafungsi(a, b)
+//bungkus function dengan kurung kurawal buka,
+//untuk menandakan awal dan akhir sebuah fungsi
+{
+    //return untuk mengembalikan sebuah nilai lalu diikitu apa yg ingin
+    //dikembalikan
+    return a;
+};
+
+namafungsi(a,b);
+
 // -------- function -------
 function volume2kubus(a, b) {
     var volume1 = a * a * a;
