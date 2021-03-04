@@ -25,7 +25,7 @@ this.halo();
 var obj = {a : 2, nama : 'ilhamfauziiskandar'};
 obj.halo = function(){
     console.log(this);
-    console.log('halo');
+    console.log(obj);
 }
 obj.halo();
 //this mengembalikan obj yang bersangkutan
