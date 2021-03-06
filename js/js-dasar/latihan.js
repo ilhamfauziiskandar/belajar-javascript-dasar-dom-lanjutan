@@ -1,9 +1,10 @@
 var penumpang = ["gabor", undefined, "ilham"];
+var batas= 15;
 
 console.log(penumpang);
 
-function tambahPenumpang(namaPenumpang, penumpang){
-
+function tambahPenumpang(namaPenumpang){
+    
     if (penumpang.length == 0) {
       
         penumpang.push(namaPenumpang);
@@ -29,19 +30,24 @@ function tambahPenumpang(namaPenumpang, penumpang){
             
             }
 
-            else if (i == penumpang.length - 1){
+            else if (i == penumpang.length - 1 && i < batas){
                 
                 penumpang.push(namaPenumpang);
-                
+
                 return penumpang;
            
+            }else if (i == batas -1){
+ 
+                console.log("pinuh lahh");
+ 
+                return penumpang;
             }
         }
     }
     
 }
 
-function hapusPenumpang(namaPenumpang, penumpang) {
+function hapusPenumpang(namaPenumpang) {
     
     return penumpang;
 }
