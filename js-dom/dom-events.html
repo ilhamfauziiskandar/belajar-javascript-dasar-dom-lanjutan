@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+</head>
+<body>
+    <a href="../index.html"> kembali</a>
+
+    <ul>
+        <h1>DOM events</h1>
+        <li>
+            <h2>EventHandler</h2>
+            <ul>
+                <li>
+                    <p>inline HTML attribute</p>
+                    <div class="container">
+                        <section class="inline">
+                            <input type="text" placeholder="ilham fauzi iskandar" disabled>
+                            <button type="button" onclick="rubahWarna()">Rubah Warna</button>
+                            <button type="button" onclick="resetWarna()">Reset</button>
+                        </section>
+                    </div>
+                    <br>
+                    <img src="../img/dom-event-inline.JPG" alt="">
+                    <img src="../img/dom-event-inline1.JPG" alt="">
+                </li>
+                <li>
+                    <p>Element Method</p>
+                    <div>
+                        <table class="daftarJalmaSedeng">
+                            <tr><th style="text-align: center;">No</th><th style="text-align: center;">Nama</th></tr>
+                            <tr><td>1.</td><td>Gabor</td></tr>
+                            <tr><td>2.</td><td>Johnny</td></tr>
+                            <tr><td>3.</td><td>budi</td></tr>
+                            <tr><td>4.</td><td>Oges</td></tr>
+                            <tr><td>5.</td><td>Jadu</td></tr>
+                        </table>
+                        <button type="button" class="ubahTabel">Rubah Warna</button>
+                        <button type="button" class="resetTabel">Reset</button>
+                    </div>
+                    <br>
+                    <img src="../img/dom-event-elementmethod.JPG" alt="">
+                    <img src="../img/dom-event-elementmethod1.JPG" alt="">
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h2>addEventListener()</h2>
+            <ul>
+                <li>
+                    <p>onClick, dblClick</p>
+
+                    <div>
+
+                        <h1 class="judul">Ilham Fauzi Iskandar</h1>
+                        
+                        <button class="changeFont">1 Click | Double Click</button>
+
+                    </div>
+                    <br>
+                    <img src="../img/dom-event-addeventlister-clickdblclick1.JPG" alt="">
+                    <br>
+                    <img src="../img/dom-event-addeventlister-clickdblclick.JPG" alt="">
+                </li>
+                <li>
+                    <div>
+                        <p>mouseenter, mouseleave</p>
+                        <button class="clickMe">Click Me</button>
+                    </div>
+                    <br>
+                    <img src="../img/dom-event-addeventlister-mouseenter.JPG" alt="">
+                    <br>
+                    <img src="../img/dom-event-addeventlister-mouseenter1.JPG" alt="">
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+<script src="../js/js-dom/dom-events.js"></script>
+</html>
