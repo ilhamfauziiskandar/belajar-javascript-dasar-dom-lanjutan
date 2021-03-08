@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <a href="../index.html"> kembali</a>
+    <h1>DOM Manipulation</h1>
+    <ul> 
+        <li>
+            <h3>Manipulation Element</h3>
+            <img src="../img/manipulasi-element.JPG" alt="">
+            <ul>
+                <li>
+                    <h4>element.innerHTML</h4>
+                    <p id="innerhtml">Tested</p>
+                    <section id="innerhtml1">
+                        <ul>
+                            <li>p1</li>
+                            <li>p2</li>
+                            <li>p3</li>
+                        </ul>
+                    </section>
+                    <img src="../img/dom-manipulation-innerhtml.JPG" alt="">
+                </li>
+                <li>
+                    <h4>element.style.<propertyCSS></h4>
+                    <div class="elementstyle">
+                        <p class="elementstyle p">Tester</p>
+                        <ul>
+                            <li class="elementstyle li1">tested</li>
+                            <li class="elementstyle li2">tested</li>
+                            <li class="elementstyle li3">tested</li>
+                        </ul>
+                    </div>
+                    <img src="../img/dom-manipulation-propertycss.JPG" alt="">
+                </li>
+                <li>
+                    <h4>element.setAttribute()</h4>
+                    <div class="attr">
+                        <p class="attr p">Tester</p>
+                        <ul>
+                            <li class="attr li1">
+                                <input type="text" class="attr input1" disabled>
+                            </li>
+                            <li class="attr li2">
+                                <input type="text" class="attr input2" disabled>
+                            </li>
+                            <li class="attr li3">
+                                <input type="text" class="attr input3" disabled>
+                            </li>
+                            <li class="attr li4">
+                                <input type="text" class="attr input4" disabled>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="../img/dom-manipulation-setattribute.JPG" alt="">
+                </li>
+                <li>
+                    <h4>element.classList</h4>
+                    <div class="classlist">
+                        <p>Tester</p>
+                        <ul>
+                            <li>
+                                <p>tested</p>
+                            </li>
+                            <li>
+                                <p>tested</p>
+                            </li>
+                            <li>
+                                <p>tested</p>
+                            </li>
+                            <li>
+                                <p>tested</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="../img/dom-manipulation-classlist.JPG" alt="">
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h3>Manipulation Node</h3>
+            <img src="../img/dom-manipulation-node.JPG" alt="" srcset="">
+            <ul>
+                <li>
+                    <p>document.createElement()</p>
+                </li>
+                <li>
+                    <P>document.createTextNode()</P>
+                </li>
+                <li>
+                    <p>node.appendChild()</p>
+                    <div id="container-1">
+                        <section id="section-a">
+                            <p class="p1">P1</p>
+                            <p class="p2">P2</p>
+                            <p class="p3">P3</p>
+                        </section>
+                        <img src="../img/dom-manipulation-appendchild.JPG" alt="">
+                    </div>     
+                </li>
+                <li>
+                    <p>node.insertBefore()</p>
+                    <div id="container-4">
+                        <section id="section-a">
+                            <ul>
+                                <li>p1</li>
+                                <li>p2</li>
+                                <li>p3</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <img src="../img/dom-manipulation-insertBefore.JPG" alt="">
+                </li>
+                <li>
+                    <p>parentNode.removeChild()</p>
+                    <div id="container-5">
+                        <section id="section-a">
+                            <p class="p-1">P1</p>
+                            <p class="p-2">P2
+                                <a href="">eww</a>
+                            </p>
+                            <p class="p-3">P3</p>
+                        </section>
+                    </div>
+                    <img src="../img/dom-manipulation-removechild.JPG" alt="">
+                </li>
+                <li>
+                    <p>parentNode.replaceChild()</p>
+                    <div id="container-6">
+                        <section id="section-a">
+                            <p class="p-1">P1</p>
+                            <p class="p-2">P2</p>
+                            <p class="p-3">P3</p>
+                        </section>
+                    </div>
+                    <img src="../img/dom-manipulation-replacechild.JPG" alt="">
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <script src="../js/js-dom/dom-manipulation.js"></script>
+</body>
+</html>
