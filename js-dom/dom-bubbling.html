@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Bubbling</title>
+</head>
+<body>
+    <a href="../index.html"> kembali</a>
+
+    <ul>
+        <h1>DOM Bubbling</h1>
+        <li>
+            <p>tidak efektif</p>
+            <div>
+                <button class="tambahData">Tambah</button>
+                <table class="formNama" style="text-align: center;" border="1px">
+                    <thead class="judul">
+                        <th colspan="2">Tabel Nama</th>
+                    </thead>
+                    <tbody>
+                        <tr class="barTable">
+                            <td>Gabor</td>
+                            <td><button class="hapus">hapus</button></td>
+                        </tr>
+                        <tr class="barTable">
+                            <td>Budi</td>
+                            <td><button class="hapus">hapus</button></td>
+                        </tr>
+                        <tr class="barTable">
+                            <td>Johnny</td>
+                            <td><button class="hapus">hapus</button></td>
+                        </tr>
+                        <tr class="barTable">
+                            <td>Jadu</td>
+                            <td><button class="hapus">hapus</button></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    </tfoot>
+                </table>
+            </div>
+            <br>
+            <img src="../img/dom-event-bubbling.JPG" alt="">
+            <br>
+            <img src="../img/dom-event-bubbling1.JPG" alt="">
+        </li>
+        <li>
+            <p>Memanfaatkan Event Bubbling</p>
+            <div class="container">
+                <button class="tambahData1">Tambah</button>
+                <table class="formNama1" style="text-align: center;" border="1px">
+                    <thead class="judul1">
+                        <th colspan="2">Tabel Nama</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="barTable1">Gabor</td>
+                            <td><button class="hapus1">hapus</button></td>
+                        </tr>
+                        <tr>
+                            <td class="barTable1">Budi</td>
+                            <td><button class="hapus1">hapus</button></td>
+                        </tr>
+                        <tr>
+                            <td class="barTable1">Johnny</td>
+                            <td><button class="hapus1">hapus</button></td>
+                        </tr>
+                        <tr>
+                            <td class="barTable1">Jadu</td>
+                            <td><button class="hapus1">hapus</button></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    </tfoot>
+                </table>
+            </div>
+            <br>
+            <img src="../img/dom-event-bubbling-benar.JPG" alt="">
+            <br>
+            <img src="../img/dom-event-bubbling-benar1.JPG" alt="">
+        </li>
+    </ul>
+</body>
+<script src="../js/js-dom/dom-bubbling.js"></script>
+</html>
