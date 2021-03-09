@@ -65,11 +65,13 @@ barTable.forEach(function(bt){
 // konsep event bubbling
 const container = document.querySelector(".container");
 
+const isiForm1 = document.querySelector("table.formNama1 tbody");
+
+
 container.addEventListener('click', function(e){
     console.log(e.target);
 
     if (e.target.className == 'tambahData1') {
-        const isiForm1 = document.querySelector("table.formNama1 tbody");
 
         const tr = document.createElement("tr");
 
@@ -102,7 +104,9 @@ container.addEventListener('click', function(e){
     }
 
     if (e.target.className == 'hapus1') {
-        e.target.parentElement.parentElement.style.display = 'none';
+        // e.target.parentElement.parentElement.style.display = 'none';
+        // console.log(e.target.parentElement.previousElementSibling.parentElement);
+        isiForm1.removeChild(e.target.parentElement.previousElementSibling.parentElement);
         e.preventDefault();
         e.stopPropagation();
     }

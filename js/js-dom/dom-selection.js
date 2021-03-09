@@ -53,3 +53,38 @@ qs[0].style.color = "lightgreen";
 for (let i = 1; i < qs.length; i++) {
     qs[i].style.color = "brown";
 }
+
+// ===============LATIHAN=================
+
+const formPengisian = document.getElementById("form-pengisian");
+
+const input = document.getElementsByTagName("input");
+
+const latihan = document.getElementsByClassName("latihan");
+
+const td = document.querySelector("div#tabel-anggota table tbody tr td:nth-child(2)");
+
+const tr = document.querySelectorAll("div#tabel-anggota table tbody tr");
+
+formPengisian.style.display = "";
+
+for (let i = 0; i < input.length; i++) {
+    
+    input[i].style.backgroundColor = "salmon";
+    input[i].style.color = "brown";
+    input[i].style.fontFamily = "arial";
+    
+}
+
+for (let i = 0; i < latihan.length; i++) {
+    
+    latihan[0].style.backgroundColor= "orange";
+    
+}
+
+td.style.backgroundColor = "salmon";
+
+for (let i = 0; i < tr.length; i++) {
+    tr[i].style.backgroundColor = "brown";
+    tr[i].style.color = "lightpink";
+}
