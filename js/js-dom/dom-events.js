@@ -63,3 +63,38 @@ changeFont.addEventListener("click", function(){
 changeFont.addEventListener("dblclick", function(){
     judul.style.fontFamily = "tahoma";
 })
+
+// ------------LATIHAN---------------
+// kuis
+
+const kuis = document.querySelector("div.kuis section.section-kuis button");
+
+// mulai kuis
+
+kuis.addEventListener("click", function() {
+    const nama = prompt("masukan nama anda");
+    const skor = 0;
+    
+    // if (nama) {
+    //     this.skor = new Soal(nama, skor);        
+    // }else{
+    //     alert("sing bener atuh");
+    // }
+});
+
+// function Soal(nama, skor) {
+
+//     this.nama = nama;
+    
+//     this.skor = skor;
+
+//     const pertanyaanPertama = prompt("ibu kota negara indonesia adalah");
+        
+//     if (pertanyaanPertama == "jakarta") {
+//         this.skor += 1;
+//         console.log(this.skor);
+//     }
+
+
+
+// }
