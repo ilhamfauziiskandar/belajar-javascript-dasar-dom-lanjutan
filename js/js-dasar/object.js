@@ -38,6 +38,18 @@ function Mahasiswa(nama, nrp, email, matkul) {
 //constructor harus menggunakan new
 var mhs2 = new Mahasiswa("Bolham", "160613031", "bolham@gmail.com", ["SO", "SEMPROG", "SI"]);
 
+
+// cara membuat object berisi array
+
+const siswa = { 
+    nama: ["ilham","fauzi", "iskandar"],
+    kelas: ["3SI", "3IF", "3KA"],
+};
+
+console.log(siswa.nama);
+console.log(siswa.kelas);
+
+
 //===========LATIHAN MEMBUAT KUIS ==================
 //  MENGGUNAKAN CONSTRUCTOR
 var kuis = document.querySelector("div.kuis button.btn-kuis");
@@ -48,6 +60,8 @@ kuis.addEventListener("click", function(){
     
     const skor = new PertanyaanKuis(nama,0);
     
+    console.log(skor);
+
     alert(skor["nama"] + " Nilai Anda " + skor["skor"]);
 });
 
@@ -56,6 +70,7 @@ function PertanyaanKuis(nama,skor) {
     this.nama = nama;
     
     this.skor = skor;
+
     
     this.skorPertama = function() {
         const pertanyaanPertama = prompt("Nama President Pertama");

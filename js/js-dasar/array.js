@@ -33,6 +33,7 @@ var arrayku1 = ['ilham', 6281908674297, true, jeniskelamin];
 console.log(arrayku1);
 
 //array didalam array (multidimensi)
+
 var arrayku2 = ['ilham', 6281908674297, true, jeniskelamin, [1,2,3,4,5]];
 
 console.log(arrayku2);
