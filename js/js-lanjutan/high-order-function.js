@@ -48,3 +48,5 @@ totalDurasi.textContent = `${jam} Jam, ${menit} Menit, ${detik} Detik`;
 const jmlhVideo = document.querySelector("span.jumlah-video");
 
 jmlhVideo.textContent = `${ambilSemuaVideo.length} videos`;
+// contoh
+console.log("bacot malik");
