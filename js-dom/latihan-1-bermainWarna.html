@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bermain dengan warna</title>
+    <style>
+        .box{
+            margin-top: 25px;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 10vh;
+        }
+        .lightblue {
+            background-color: lightblue;
+        }
+        .boxbox{
+            text-align: center;
+        }
+        .kotak{
+            width: 25px;
+            height: 25px;
+            margin: 10px auto;
+        }
+        .warnaMerah{
+            background-color: red;
+        }
+        .warnaBiru{
+            background-color: blue;
+        }
+        .warnaHijau{
+            background-color: green;
+        }
+        .p{
+            margin: 5px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html">kembali</a>
+   
+    <div class="box">
+        <h1>Bermain dengan warna</h1>
+
+        <button type="button" id="btnAcakAngka">Acak Angka</button>
+
+        <button type="button" id="btnAcakRGB">Acak RGB</button>
+
+    </div>
+
+    <div class="boxbox">
+        <div>
+            <div class="kotak warnaMerah"></div>
+            <p class="p merah">100</p>
+            <input type="range" name="sliderMerah" min="0" max="255">
+        </div>
+
+        <div>
+            <div class="kotak warnaBiru"></div>
+            <p class="p biru">100</p>
+            <input type="range" name="sliderBiru" min="0" max="255">
+        </div>
+        
+        <div>
+            <div class="kotak warnaHijau"></div>
+            <p class="p hijau">100</p>
+            <input type="range" name="sliderHijau" min="0" max="255">
+        </div>
+    
+    </div>
+
+    <script src="../js/js-dom/dom-bermainWarna.js"></script>
+</body>
+</html>
