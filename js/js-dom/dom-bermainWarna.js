@@ -2,8 +2,6 @@ const divBody = document.querySelectorAll("div.box");
 
 const btnAcakAngka = document.getElementById("btnAcakAngka");
 
-const body1 = document.querySelector("body");
-
 const btnAcakRGB = document.getElementById("btnAcakRGB");
 
 const slideMerah = document.querySelector('input[name="sliderMerah"]');
@@ -27,7 +25,7 @@ btnAcakAngka.addEventListener('click', function() {
     
         pBaru.classList.add("acakWarna");
     
-        const angkaAcak = Math.round(Math.random() * 100);
+        const angkaAcak = Math.round(Math.random() * 100 + 1);
     
         const pTextBaru = document.createTextNode(angkaAcak); 
     
@@ -51,7 +49,7 @@ btnAcakAngka.addEventListener('click', function() {
         
         const spanKehokian = document.querySelector('span.angkaKehokian');
 
-        const angkaAcak = Math.round(Math.random() * 100);
+        const angkaAcak = Math.round(Math.random() * 100 + 1);
 
         pAcak.innerHTML = angkaAcak;
 
