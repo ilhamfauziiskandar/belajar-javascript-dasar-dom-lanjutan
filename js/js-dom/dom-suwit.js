@@ -32,14 +32,16 @@ pilihanSuwitJawa.forEach(function(pilihan){
 
         const hasil = hasilSuwitJawa(pilihanPlayer,pilihanComputer);
 
+        const info = document.querySelector("div.info");
+
+        info.innerHTML = "";    
+
         putarSuwitJawa();
         
         setTimeout(function() {
             const imgComputer = document.querySelector("img.img-komputer");
         
             imgComputer.setAttribute('src', '../img/img/'+ pilihanComputer + '.png');
-            
-            const info = document.querySelector("div.info");
             
             info.innerHTML = hasil;    
         }, 2000);
@@ -118,6 +120,7 @@ function putarSuwitJawa(){
     const gambar = ['gajah','semut','orang'];
     let i = 0;
     const waktuMulai = new Date().getTime();
+    console.log(waktuMulai);
     setInterval(function(){
         if(new Date().getTime() - waktuMulai > 2000){
             clearInterval;
