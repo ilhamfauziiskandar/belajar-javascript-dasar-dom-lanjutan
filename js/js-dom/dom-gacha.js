@@ -25,9 +25,7 @@ let getCountB5 = 0;
 let heroB5 = [];
 
 gacha.forEach(function(summon){
-    summon.addEventListener("click", function() {
-        const jumlahBuka = document.querySelector("span.count");
- 
+    summon.addEventListener("click", function() { 
         const jumlahSummon = summon.className;
  
         if (jumlahSummon == "gacha1x"){
@@ -38,14 +36,43 @@ gacha.forEach(function(summon){
 
             jumlahBuka.innerHTML = totalBuka;
 
-            const no = Math.random() * 100;
+            const rate = rateGacha();
 
-            const rate = rateGacha(no);
+            if (rate == "rare") {
+                const hadiahDapat = heroRare();
 
-            const hadiah = hadiahGacha(rate);
+                info.innerHTML = hadiahDapat;
             
-            info.innerHTML = hadiah;
-            console.log(no);
+                console.log(hadiahDapat);
+            }
+
+            if (rate == "epic") {
+                const hadiahDapat = heroEpic();
+
+                info.innerHTML = hadiahDapat;
+            
+                console.log(hadiahDapat);
+            }
+
+            if (rate == "legendary") {
+                const hadiahDapat = heroLegendary(); 
+
+                getCountB5 = 0;
+                
+                info.innerHTML = hadiahDapat;
+
+                totalB5 += 1;
+
+                b5.innerHTML = totalB5;
+
+                heroB5.push(hadiahDapat);            
+
+                spanHeroB5.innerHTML = heroB5;
+
+                console.log(hadiahDapat);
+
+            }
+            
         }
 
         if (jumlahSummon == "gacha10x"){
@@ -54,34 +81,55 @@ gacha.forEach(function(summon){
   
             for (let i = 0; i < 10; i++) {
                 totalBuka += 1;
- 
-                getCountB5 += 1; 
+
+                getCountB5 += 1;
+    
+                const rate = rateGacha();
+    
+                if (rate == "rare") {
+                    const hadiahDapat = heroRare();
+
+                    hadiahSummon10x.push(hadiahDapat);
+                                    
+                    console.log(hadiahDapat);
+                }
+    
+                if (rate == "epic") {
+                    const hadiahDapat = heroEpic();
+    
+                    hadiahSummon10x.push(hadiahDapat);
                 
-                if (getCountB5 >= 30) {
-                    const no = Math.random() * 2 + 98;
-        
-                    const rate = rateGacha(no);
-            
-                    const hadiah = hadiahGacha(rate);        
-        
-                    hadiahSummon10x.push(hadiah);
-                    console.log(no);
-        
+                }
+    
+                if (rate == "legendary") {
+                    const hadiahDapat = heroLegendary(); 
+    
+                    hadiahSummon10x.push(hadiahDapat);
+
                     getCountB5 = 0;
-
-                }else{
-                    const no = Math.random() * 100;
-
-                    const rate = rateGacha(no);
         
-                    const hadiah = hadiahGacha(rate);        
-                    console.log(no);
-                    hadiahSummon10x.push(hadiah);
+                    totalB5 += 1;
+
+                    b5.innerHTML = totalB5;
+
+                    heroB5.push(hadiahDapat);            
     
                 }
+                
+                if (getCountB5 >= 30) {
+                
+                    getCountB5 = 0;
+                
+                    const hadiahDapat = heroLegendary(); 
+        
+                    hadiahSummon10x.push(hadiahDapat);
+                
+                }
             }
-            
+
             jumlahBuka.innerHTML = totalBuka;
+
+            spanHeroB5.innerHTML = heroB5;
 
             info10x.innerHTML = hadiahSummon10x;
         }
@@ -91,13 +139,15 @@ gacha.forEach(function(summon){
         
             getCountB5 = 0;
         
-            const no = Math.random() * 2 + 98;
-            console.log(no);
-            const rate = rateGacha(no);
-    
-            const hadiah = hadiahGacha(rate);        
+            const hadiahDapat = heroLegendary(); 
 
-            info.innerHTML = hadiah;
+            heroB5.push(hadiahDapat);            
+
+            spanHeroB5.innerHTML = heroB5;
+
+            info.innerHTML = hadiahDapat;
+
+            console.log(hadiahDapat);
 
         }
         
@@ -105,93 +155,134 @@ gacha.forEach(function(summon){
     
 })
 
-function rateGacha(rate) {
+reset.addEventListener("click", function() {
+  
+    totalBuka = 0;
     
-    if (rate < 70) return "rare";
+    totalLegendary = 0;
+  
+    getCountB5 = 0;
+  
+    totalB5 = 0;
+    
+    heroB5 = [];
+    
+    jumlahBuka.innerHTML = 0;
+  
+    info.innerHTML = "";
+    
+    legendary.innerHTML = totalLegendary;
+  
+    spanHeroB5.innerHTML = "";
+    
+    b5.innerHTML = 0;
+  
+    info10x.innerHTML = "";
+})
+
+function rateGacha() {
+    const rate = Math.round(Math.random() * 100 + 0);
+    console.log(rate);
+    if (rate <= 80) return "rare";
  
-    if (rate >= 70 && rate < 98) return "epic";
+    if (rate > 80 && rate <= 95) return "epic";
  
-    if (rate >= 98 && rate < 99.68) return "legendary";
+    if (rate > 95 && rate <= 100) return "legendary";
  
-    if (rate >= 99.68) return "ancient";
 }
 
-function hadiahGacha(rate){
-    
-    if (rate == "rare") {
-        const hadiah = ["invoker", "chimera"];
+function heroLegendary() {
+    const no = Math.random() * 15;
 
-        const noHadiah = Math.round(Math.random() * (hadiah.length - 1) + 0);
-        
-        return hadiah[noHadiah];
-    }else if (rate == "epic") {
-        const hadiah = ["grim", "cathaline", "Engkong", "bard", "inferno", "siren", "undine", "agemamon", "satyr", "lucifer", "luna"];
-
-        const noHadiah = Math.round(Math.random() * (hadiah.length - 1) + 0);
-        
-        return hadiah[noHadiah];
-    }else if (rate == "legendary"){
-        const hadiah = ["posseidon", "galene", "ares", "odin","succubus", "athena", "medusa", "vampire", "karzan", "apollo","phoenix","gaia","iset","aleria","anubis","messa"];
-        
-        const noHadiah = Math.round(Math.random() * (hadiah.length - 1) + 0);
-        
-        totalB5 += 1;
-        
-        b5.innerHTML = totalB5;
-        
-        heroB5.push(hadiah[noHadiah]);
-
-        spanHeroB5.innerHTML = heroB5;
-
-        return hadiah[noHadiah];
-    }else if (rate == "ancient"){
-        const hadiah = [
-            "ilsya","titan","dion","leviathan","jormungan",
-            "sphinx","sythia","pan","ratatousk","seshat","fenrir",
-            "nezha","heimdall","valk","prometheus","balrog","archie",
-            "venus","thor","hera","zeus","oracle","raphael","gabriel",
-            "hel","darklord","nidhog","abbadon","Uriel","support dark"
+    if (no <= 7.5) {
+        hero = [
+            "Medusa", "Galadriel",
+            "Ares","Nereid","Pisces","Merlin Muda",
+            "Apollo","Vampire","Karzan"
         ];
         
-        const noHadiah = Math.round(Math.random() * (hadiah.length - 1) + 0);
+        const hadiah = Math.round(Math.random() * (hero.length - 1) + 0);
         
-        totalLegendary += 1;
+        return hero[hadiah];
+    }
 
-        totalB5 += 1;
+    if (no > 7.5 && no <= 12.5) {
+        hero = [
+            "Athena", "Odin", "Succubus","Gaiming",
+            "Gelene","Posseidon", "Naga Frost", 
+            "Seraphim","Balrog","Phoenix",
+            "Gaia","Iset",
+            "Lucifer","Messa"
+        ];    
+
+        const hadiah = Math.round(Math.random() * (hero.length - 1) + 0);
         
-        legendary.innerHTML = totalLegendary;   
-     
-        heroB5.push(hadiah[noHadiah]);
-     
-        b5.innerHTML = totalB5;
+        return hero[hadiah];
+    }
+    
+    if (no > 12.5 && no <= 14) {
+        hero = [
+            "Fenrir","Ratatousk","Synthia","Seshat","Pan","Sphinx",
+            "Leviathan","Jormungan","Dion","ilsya","Titan",
+            "Prometheus","Valkrie","Heimdall","Archie","Loki","Nezha",
+            "Thor","Alleria",
+            "Abbadon","Anubis"
+        ];    
 
-        spanHeroB5.innerHTML = heroB5;
+        const hadiah = Math.round(Math.random() * (hero.length - 1) + 0);
 
-        return hadiah[noHadiah];
+        return hero[hadiah];
+    }
+ 
+    if (no > 14 && no <= 15) {   
+        hero = [
+            "Venus","Oracle","Raphael","Gabriel","Zeus",
+            "Hel","Nidhog","Pandora","Darklord","Amon"
+        ];    
+
+        const hadiah = Math.round(Math.random() * (hero.length - 1) + 0);
+
+
+        return hero[hadiah];
+    }
+    
+    
+}
+
+function heroEpic() {
+    const no = Math.random() * 22.5 + 0 ;
+
+    if (no >= 17) {
+        hero = [
+            "Bard","Grim","Tyr","Gandalf","Satyr",
+            "Arthur","Siren","Tethys","Mage Salju","Undine",
+            "Ix","Catherine","Agamemnon","Renault","Harpy"
+        ];
+        
+        const hadiah = Math.round(Math.random() * (hero.length - 1) + 0);
+
+        return hero[hadiah];
+    }else{
+        hero = [
+            "Theia","Luna","Legolas","Eros",
+            "Witch Racun","Xerxes","Achilles","Doom"
+        ];
+
+        const hadiah = Math.round(Math.random() * (hero.length - 1) + 0);
+
+        return hero[hadiah];
     }
 }
 
-reset.addEventListener("click", function() {
-  
-  totalBuka = 0;
-  
-  totalLegendary = 0;
+function heroRare() {
+    hero = [
+        "Lycan","Viking","Hellfire","Dwarf Guard","Otto",
+        "Hecate","Idron","Sorceress","Madea","Destroyer",
+        "Golem","Griffin","Ranger","Kinnara","Treant",
+        "Sur","Azazel"
+    ];
 
-  getCountB5 = 0;
+    const hadiah = Math.round(Math.random() * (hero.length - 1) + 0);
 
-  totalB5 = 0;
-  
-  heroB5 = [];
-  
-  jumlahBuka.innerHTML = 0;
-
-  info.innerHTML = "";
-  
-  legendary.innerHTML = totalLegendary;
-
-  spanHeroB5.innerHTML = "";
-  
-  b5.innerHTML = 0;
-
-  info10x.innerHTML = "";
-})
+    return hero[hadiah];
+}
