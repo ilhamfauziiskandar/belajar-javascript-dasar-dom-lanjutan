@@ -1,0 +1,32 @@
+[
+    {
+        "nama": "ilham",
+        "kelas": "3IF",
+        "jenisKelamin": "pria",
+        "email": "ilham@gmail.com"
+    },
+    {
+        "nama": "fauzi",
+        "kelas": "3IF",
+        "jenisKelamin": "pria",
+        "email": "fauzi@gmail.com"
+    },
+    {
+        "nama": "iskandar",
+        "kelas": "3IF",
+        "jenisKelamin": "pria",
+        "email": "iskandar@gmail.com"
+    },
+    {
+        "nama": "gabor",
+        "kelas": "3IF",
+        "jenisKelamin": "pria",
+        "email": "gabor@gmail.com"
+    },
+    {
+        "nama": "bolham",
+        "kelas": "3IF",
+        "jenisKelamin": "pria",
+        "email": "bolham@gmail.com"
+    }
+]
