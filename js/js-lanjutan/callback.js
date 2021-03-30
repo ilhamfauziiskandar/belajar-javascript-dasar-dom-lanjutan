@@ -1,3 +1,5 @@
+const dataMhs = document.querySelector("table.daftar-mahasiswa tbody.data-mahasiswa");
+
 // Synchronous Callback
 const mhs = [
     {
@@ -50,7 +52,10 @@ console.log("mulai");
 
 getDataMhs('../json/mahasiswa.json', success => {
     const mhs = JSON.parse(success);
-    mhs.forEach(m => console.log(m.nama));
+    console.log(mhs);
+    mhs.forEach(m => {
+        dataMhs.innerHTML = td(m);
+    });
 }, () => {});
 
 console.log("selesai");
@@ -69,3 +74,14 @@ $.ajax({
 })
 
 console.log("selesai");
+
+function td(mhs) {
+    return  `
+    <tr>
+    <td>${mhs.nama}</td>
+    <td>${mhs.kelas}</td>
+    <td>${mhs.jenisKelamin}</td>
+    <td>${mhs.email}</td>
+    </tr>
+    `;
+}
