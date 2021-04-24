@@ -48,3 +48,5 @@ include
 - This Arrow Function
 - Var Let Const
 
+# Exercise
+- Gacha Game Idle Legend
